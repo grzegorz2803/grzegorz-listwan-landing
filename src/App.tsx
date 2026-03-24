@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { content } from "./content/languages";
 
 function App() {
@@ -56,15 +56,15 @@ function App() {
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
         {/* DODAJ TO: Gradient górny (maskuje wejście) */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
 
         {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         {/* Tu wstawimy obrazek jako tło w następnym kroku */}
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/hero-bg.jpg')] bg-cover bg-center" />
 
         {/* Overlay gradientowy dla czytelności */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]" />
 
         <div className="relative z-10 text-center px-6">
           <div className="inline-block px-4 py-1 border border-cyan-500/30 rounded-full bg-cyan-500/5 text-cyan-400 text-xs font-mono mb-8 animate-pulse">
@@ -94,10 +94,10 @@ function App() {
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
         {/* DODAJ TO: Gradient górny (maskuje wejście) */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
 
         {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         {/* Tło graficzne - upewnij się, że plik jest w /public */}
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/about-bg.jpg')] bg-cover bg-center" />
 
@@ -130,10 +130,10 @@ function App() {
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
         {/* DODAJ TO: Gradient górny (maskuje wejście) */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
 
         {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         <div className="absolute inset-0 z-0 opacity-30 bg-[url('/stack-bg.jpg')] bg-cover bg-center" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
@@ -210,10 +210,10 @@ function App() {
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
         {/* DODAJ TO: Gradient górny (maskuje wejście) */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
 
         {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/future-bg.jpg')] bg-cover bg-center" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
@@ -242,7 +242,7 @@ function App() {
             ))}
           </div>
           {/* SEKCJA KONTAKTOWA (Dodaj nad footerem) */}
-          <div className="mt-20 mb-12 py-12 border-y border-white/5 bg-white/[0.02] backdrop-blur-md rounded-3xl px-8">
+          <div className="mt-20 mb-12 py-12 border-y border-white/5 bg-white/2 backdrop-blur-md rounded-3xl px-8">
             <h4 className="text-gray-400 font-mono text-sm uppercase tracking-widest mb-4">
               {t.future.contactTitle}
             </h4>
