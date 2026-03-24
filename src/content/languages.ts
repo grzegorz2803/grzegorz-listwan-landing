@@ -84,7 +84,7 @@ export const content: Record<"pl" | "en", TranslationContent> = {
         "Full i18n System Implementation - Spring 2027",
       ],
       contactTitle: "Let's build something together",
-      contactEmail: "glistwan94@gmail.com",
+      contactEmail: "listwan94@gmail.com",
       footer: "Official full portfolio premiere - Autumn 2026",
     },
   },
