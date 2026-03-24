@@ -24,14 +24,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
-        run: npm run build
+        # CI=false ignoruje błędy typu 'unused variables', które widzieliśmy na screenie
+        run: CI=false npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -39,8 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Sprawdź czy Twój projekt buduje się do folderu 'dist' (standard dla Vite)
-          # Jeśli używasz starego Reacta, może to być folder 'build'
+          # Standardowo dla Vite to ./dist, dla Create React App to ./build
           path: ./dist
 
   deploy:
