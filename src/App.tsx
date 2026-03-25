@@ -29,7 +29,7 @@ function App() {
               {lang.toUpperCase()}
             </button>
 
-            <div className="hidden md:flex gap-4 border-l border-gray-800 pl-6">
+            <div className="flex items-center gap-3 md:gap-4 border-l border-gray-800 pl-4 md:pl-6">
               <a
                 href="https://github.com/grzegorz2803"
                 className="hover:text-cyan-400 transition-colors"
@@ -49,47 +49,43 @@ function App() {
           </div>
         </div>
       </nav>
-
       {/* HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative  min-h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
         {/* Obrazek tła */}
-        <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
-
-        {/* DODAJ TO: Gradient górny (maskuje wejście) */}
-        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
-
-        {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
-        {/* Tu wstawimy obrazek jako tło w następnym kroku */}
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/hero-bg.jpg')] bg-cover bg-center" />
 
-        {/* Overlay gradientowy dla czytelności */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]" />
+        {/* Gradienty maskujące */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a] to-transparent z-10" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10" />
 
-        <div className="relative z-10 text-center px-6">
-          <div className="inline-block px-4 py-1 border border-cyan-500/30 rounded-full bg-cyan-500/5 text-cyan-400 text-xs font-mono mb-8 animate-pulse">
+        {/* Overlay dla czytelności */}
+        <div className="absolute inset-0 bg-black/40 md:bg-transparent z-1" />
+
+        {/* KONTENER TREŚCI - Teraz będzie idealnie na środku */}
+        <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center justify-center">
+          <div className="inline-block px-4 py-1 border border-cyan-500/30 rounded-full bg-cyan-500/5 text-cyan-400 text-[10px] md:text-xs font-mono mb-6 animate-pulse">
             System Status: Online • v1.0
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase">
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter uppercase leading-[0.9]">
             {t.hero.title}
           </h1>
 
-          <p className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-12">
+          <p className="text-base md:text-2xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
             {t.hero.subtitle}
           </p>
 
           <a
-            href="#"
+            href="https://linkedin.com/in/grzegorz-listwan"
             target="_blank"
-            className="inline-flex items-center px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(8,145,178,0.3)]"
+            className="inline-flex items-center px-10 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg transition-all transform active:scale-95 shadow-[0_0_20px_rgba(8,145,178,0.3)]"
           >
             {t.hero.cta}
           </a>
         </div>
       </section>
       {/* SEKCJA [ 01 ] O MNIE */}
-      <section className="relative min-h-screen flex items-center bg-[#0a0a0a] overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center bg-[#0a0a0a] overflow-hidden">
         {/* Obrazek tła */}
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
@@ -102,7 +98,7 @@ function App() {
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/about-bg.jpg')] bg-cover bg-center" />
 
         {/* Kontener treści z Tailwind */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-16 items-center">
           {/* Lewa strona - Tekst (z i18n) */}
           <div className="order-2 md:order-1 space-y-8">
             <h2 className="text-sm font-mono font-bold uppercase tracking-widest text-cyan-400">
@@ -125,7 +121,7 @@ function App() {
       </section>
       {/* SEKCJA [ 02 ] STACK TECH */}
       {/* SEKCJA [ 02 ] STACK TECH */}
-      <section className="relative min-h-screen flex items-center bg-[#0a0a0a] overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center bg-[#0a0a0a] overflow-hidden">
         {/* Obrazek tła */}
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/...')] bg-cover bg-center" />
 
@@ -133,12 +129,12 @@ function App() {
         <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-[#0a0a0a] to-transparent z-1" />
 
         {/* DODAJ TO: Gradient dolny (maskuje wyjście) */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
+        <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         <div className="absolute inset-0 z-0 opacity-30 bg-[url('/stack-bg.jpg')] bg-cover bg-center" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-24 w-full">
           {/* NAGŁÓWEK SEKCJI */}
-          <div className="mb-16">
+          <div className="mb-12">
             <h2 className="text-sm font-mono font-bold uppercase tracking-widest text-cyan-400 mb-4">
               {t.stack.title}
             </h2>
@@ -216,7 +212,7 @@ function App() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent z-1" />
         <div className="absolute inset-0 z-0 opacity-40 bg-[url('/future-bg.jpg')] bg-cover bg-center" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center">
           {/* NOWY, BRAKUJĄCY NAGŁÓWEK SEKCJI */}
           <div className="mb-16 text-center">
             <h2 className="text-sm font-mono font-bold uppercase tracking-widest text-cyan-400 mb-4">
@@ -253,13 +249,13 @@ function App() {
               {t.future.contactEmail}
             </a>
             <p className="mt-6 text-gray-500 font-mono text-sm">
-              Dostępny dla projektów IoT, Web oraz Embedded.
+              {t.future.contactAvailability}
             </p>
           </div>
           <footer className="mt-24 pt-12 border-t border-white/5 text-gray-600 text-sm font-mono">
             <p>{t.future.footer}</p>
-            <p className="mt-2">
-              © {new Date().getFullYear()} GRZEGORZ LISTWAN
+            <p className="mt-2 uppercase">
+              © {new Date().getFullYear()} {t.future.name}
             </p>
           </footer>
         </div>

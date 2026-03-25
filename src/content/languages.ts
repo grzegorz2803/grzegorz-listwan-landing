@@ -21,7 +21,9 @@ export type TranslationContent = {
     comingSoon: string[];
     contactTitle: string;
     contactEmail: string;
+    contactAvailability: string;
     footer: string;
+    name: string;
   };
 };
 
@@ -54,7 +56,9 @@ export const content: Record<"pl" | "en", TranslationContent> = {
       ],
       contactTitle: "Zbudujmy coś razem",
       contactEmail: "listwan94@gmail.com",
+      contactAvailability: "Dostępny dla projektów IoT, Web oraz Embedded.",
       footer: "Planowana premiera pełnego portfolio - jesień 2026.",
+      name: "Grzegorz Listwan",
     },
   },
   en: {
@@ -85,7 +89,9 @@ export const content: Record<"pl" | "en", TranslationContent> = {
       ],
       contactTitle: "Let's build something together",
       contactEmail: "listwan94@gmail.com",
+      contactAvailability: "Available for IoT, Web, and Embedded projects.",
       footer: "Official full portfolio premiere - Autumn 2026",
+      name: "Grzegorz Listwan",
     },
   },
 };
