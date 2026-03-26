@@ -11,37 +11,45 @@ function App() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-200 font-sans selection:bg-cyan-500/30">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/20 border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-mono font-bold tracking-tighter">
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/5">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
+          {/* LOGO */}
+          <div className="text-base md:text-xl font-mono font-bold tracking-tighter text-white">
             <span className="text-cyan-500">&lt;</span>
             GrzegorzListwan.pl
             <span className="text-cyan-500"> /&gt;</span>
           </div>
 
-          <div className="flex items-center gap-6">
+          {/* PRAWA STRONA: JĘZYK + IKONY */}
+          <div className="flex items-center gap-4">
             {/* Przełącznik języka */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-2 px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 transition-all text-sm font-mono text-gray-300"
+              className="flex items-center gap-2 px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 transition-all text-[10px] md:text-sm font-mono text-gray-300 bg-black/40"
             >
               <GlobeIcon />
               {lang.toUpperCase()}
             </button>
 
-            <div className="flex items-center gap-3 md:gap-4 border-l border-gray-800 pl-4 md:pl-6">
+            {/* Kontener ikon - usunęliśmy md:flex, dodaliśmy responsywne gap i padding */}
+            <div className="flex items-center gap-4 border-l border-gray-800 pl-4 h-5">
               <a
                 href="https://github.com/grzegorz2803"
-                className="hover:text-cyan-400 transition-colors"
+                target="_blank"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <GithubIcon />
               </a>
-              <a href="#" className="hover:text-cyan-400 transition-colors">
+              <a
+                href="https://linkedin.com/in/grzegorz-listwan"
+                target="_blank"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
                 <LinkedinIcon />
               </a>
               <a
                 href="mailto:listwan94@gmail.com"
-                className="hover:text-cyan-400 transition-colors"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <MailIcon />
               </a>
