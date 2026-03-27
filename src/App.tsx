@@ -41,7 +41,7 @@ function App() {
                 <GithubIcon />
               </a>
               <a
-                href="www.linkedin.com/in/grzegorz-listwan-0a8507171"
+                href="https://www.linkedin.com/in/grzegorz-listwan-0a8507171"
                 target="_blank"
                 className="text-gray-400 hover:text-cyan-400 transition-colors"
               >
@@ -84,7 +84,7 @@ function App() {
           </p>
 
           <a
-            href="www.linkedin.com/in/grzegorz-listwan-0a8507171"
+            href="https://www.linkedin.com/in/grzegorz-listwan-0a8507171"
             target="_blank"
             className="inline-flex items-center px-10 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg transition-all transform active:scale-95 shadow-[0_0_20px_rgba(8,145,178,0.3)]"
           >
